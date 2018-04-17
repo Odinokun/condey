@@ -2,8 +2,8 @@ module.exports = function() {
 
   // begin Slick slider
 
-  $('.slick').slick({
-    dots: true,
+  $('#top-slider').slick({
+    dots: false,
     infinite: true,
     speed: 500,
     fade: true,
