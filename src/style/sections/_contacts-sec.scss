@@ -1,0 +1,101 @@
+.contacts-sec {
+  //  position: relative;
+  //  overflow: hidden;
+  //  margin-top: -50px;
+    padding-top: 70px;
+  background-image: url('../img/bg-why-we.png');
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  background-size: cover;
+  .container {
+    position: relative;
+    max-width: 1000px;
+    text-align: center;
+  }
+}
+.contacts-sec__header {
+  text-align: center;
+}
+.contacts-sec__header-title {
+  font-family: $font-beb-b;
+  font-size: 48px;
+  color: #fff;
+}
+.contacts-sec__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  @include max(768) {
+    justify-content: space-around;
+  }
+  @include max(550) {
+    flex-wrap: wrap;
+  }
+}
+.contacts-sec__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  svg {
+    width: 34px;
+    height: 42px;
+    margin-bottom: 10px;
+    fill: #fff;
+  }
+}
+.contacts-sec__item--left,
+.contacts-sec__item--right {
+  flex: none;
+  width: 230px;
+  @include max(768) {
+    width: 50%;
+    max-width: 250px;
+  }
+  @include max(550) {
+    width: 100%;
+    margin-bottom: 30px;
+    max-width: 260px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+.contacts-sec__item--middle {
+  width: 100%;
+  min-height: 180px;
+  background-image: url('../img/contacts-sec-car.png');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: contain;
+  @include max(768) {
+
+    display: none;
+  }
+}
+.contacts-sec__adress,
+.contacts-sec__phone {
+  text-decoration: none;
+  color: #fff;
+}
+.contacts-sec__adress {
+  font-family: $font-beb;
+  font-size: 24px;
+  display: block;
+  margin-bottom: 10px;
+}
+.contacts-sec__phone {
+  font-family: $font-beb-b;
+  font-size: 36px;
+}
+.top-slider__btn{
+  font-size: 26px;
+  transform: translateY(50%);
+  @include max(550) {
+    font-size: 20px;
+  }
+  @include max(375) {
+    font-size: 16px;
+  }
+}
