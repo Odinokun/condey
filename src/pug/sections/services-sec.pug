@@ -1,0 +1,27 @@
+mixin services-sec__item(svg, title)
+  a(href="#").services-sec__item
+    .services-sec__icon
+      svg.services-sec-bg
+        path(d="M430,780l16-43,32-2,18-12,32,6,15,27-2,25-8,48-37,1-33,8-13-17-14-15Z" transform="translate(-430 -723)")
+      svg
+        use(xlink:href='assets/img/sprite.svg#services-' + svg + '')
+    span.services-sec__title #{title}
+
+//begin services-sec
+section.services-sec
+  .container
+    header.services-sec__header
+      header.services-sec__header-title Наши услуги
+    .services-sec__list
+      +services-sec__item('01', 'заправка и обслуживание')
+      +services-sec__item('02', 'антибактериальная обработка')
+      +services-sec__item('01', 'ремонт кондиционеров')
+      +services-sec__item('02', 'ремонт компрессоров')
+      +services-sec__item('01', 'ремонт компрессоров')
+      +services-sec__item('02', 'заправка и обслуживание')
+      +services-sec__item('01', 'антибактериальная обработка')
+      +services-sec__item('02', 'ремонт кондиционеров')
+      +services-sec__item('01', 'ремонт компрессоров')
+      +services-sec__item('02', 'ремонт компрессоров')
+
+//end   services-sec
