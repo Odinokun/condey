@@ -1,0 +1,17 @@
+mixin top-slider__item(pic, title)
+  .top-slider__item(style='background-image:url("assets/img/top-slider-' + pic + '.jpg")')
+    .top-slider__banner
+      .top-slider__title #{title}
+      .top-slider__subtitle знаем о кондиционерах все!
+      button.top-slider__btn.btn Диагностика - бесплатно
+
+//begin top-slider
+section.top-slider-wrap
+  .focus
+    img(src="assets/img/focus.png" alt="focus")
+  section.top-slider#top-slider
+    +top-slider__item('01', 'ремонт и обслуживание автомобильных климатических систем')
+    +top-slider__item('02', '02 ремонт и обслуживание автомобильных климатических систем')
+    +top-slider__item('01', '03 ремонт и обслуживание автомобильных климатических систем')
+    +top-slider__item('02', '04 ремонт и обслуживание автомобильных климатических систем')
+//end   top-slider
