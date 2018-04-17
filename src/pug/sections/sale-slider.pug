@@ -1,17 +1,19 @@
-mixin top-slider__item(pic, title)
-  .top-slider__item(style='background-image:url("assets/img/top-slider-' + pic + '.jpg")')
-    .top-slider__banner
-      .top-slider__title #{title}
-      .top-slider__subtitle знаем о кондиционерах все!
-      button.top-slider__btn.btn Диагностика - бесплатно
+mixin sale-slider__item(pic, text01)
+  //.sale-slider__item(style="clip-path: polygon(0% 9%0% 9%, 6% 0%, 6% 0%, 29% 2%, 29% 2%, 51% 0%, 51% 0%, 82% 2%, 82% 2%, 95% 0%, 95% 0%, 100% 9%, 100% 9%, 99% 43%, 99% 43%, 100% 85%, 100% 85%, 95% 100%, 95% 100%, 81% 96%, 81% 96%, 39% 99%, 39% 99%, 20% 94%, 20% 94%, 4% 97%, 4% 97%, 2% 68%, 2% 68%, 2% 32%, 2% 32%);")
+  .sale-slider__item
+    .sale-slider__item-text
+      span.sale-slider__text-01 #{text01}
+      span.sale-slider__text-02 заправка кондиционера
+      span.sale-slider__text-03 499р.
+      span.sale-slider__text-04 Вы можете продиагностировать и заправить хладагентом ваш автомобильный кондиционер по акции
+      button.sale-slider__btn.btn Записаться
 
-//begin top-slider
-section.top-slider-wrap
-  .focus
-    img(src="assets/img/focus.png" alt="focus")
-  section.top-slider#top-slider
-    +top-slider__item('01', 'ремонт и обслуживание автомобильных климатических систем')
-    +top-slider__item('02', '02 ремонт и обслуживание автомобильных климатических систем')
-    +top-slider__item('01', '03 ремонт и обслуживание автомобильных климатических систем')
-    +top-slider__item('02', '04 ремонт и обслуживание автомобильных климатических систем')
-//end   top-slider
+    .sale-slider__item-pic(style='background-image:url("assets/img/sale-slider-' + pic + '.jpg")')
+
+//begin sale-slider
+section.sale-slider-wrap
+  section.sale-slider#sale-slider
+    +sale-slider__item('01', 'АКЦИЯ!')
+    +sale-slider__item('01', 'АКЦИЯ!!')
+    +sale-slider__item('01', 'АКЦИЯ!!')
+//end   sale-slider

@@ -1,0 +1,78 @@
+.why-we {
+  position: relative;
+  overflow: hidden;
+  margin-top: -50px;
+  padding-top: 170px;
+  background-image: url('../img/bg-why-we.png');
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  background-size: cover;
+  .container {
+    position: relative;
+    max-width: 1000px;
+    &::before {
+      position: absolute;
+      right: 100%;
+      bottom: 0;
+      width: 486px;
+      height: 573px;
+      content: '';
+      background: url('../img/left-car.png') 100% 100% no-repeat;
+    }
+  }
+}
+.why-we__header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.why-we__header-title {
+  font-family: $font-beb-b;
+  font-size: 48px;
+  color: #fff;
+}
+.why-we__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.why-we__item {
+  display: flex;
+  align-items: center;
+  flex: none;
+  width: 33.33%;
+  max-width: 250px;
+  margin-bottom: 80px;
+
+  @include max(700) {
+    width: 50%;
+  }
+  @include max(550) {
+    flex-direction: column;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  &:hover {
+    svg {
+      transform: scale(1.1);
+    }
+  }
+  svg {
+    flex: none;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    transition: transform .3s ease-in-out;
+    transform: scale(1);
+
+    fill: #fff;
+    @include max(550) {
+      margin: 0 0 20px 0;
+    }
+  }
+}
+.why-we__title {
+  font-family: $font-beb;
+  font-size: 22px;
+  line-height: 1.15;
+  color: #fff;
+}
