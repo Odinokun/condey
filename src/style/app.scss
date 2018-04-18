@@ -5,7 +5,7 @@
 @import 'core/base';
 
 //elements
-// @import 'elements/breadcrumbs';
+ @import 'elements/breadcrumbs';
  @import 'elements/burger';
 // @import 'elements/pagination';
  @import 'elements/popup';
@@ -22,6 +22,9 @@
 @import 'sections/blog-sec';
 @import 'sections/breaking-sec';
 @import 'sections/why-sec';
+@import 'sections/page-header';
+@import 'sections/aside';
 
 //pages
 @import 'pages/index';
+@import 'pages/inner';

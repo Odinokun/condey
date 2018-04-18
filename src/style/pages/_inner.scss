@@ -1,0 +1,35 @@
+.inner {
+  position: relative;
+  background-color: #fff;
+}
+.page-container {
+  padding-top: 40px;
+}
+.page-top-icon {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  left: 0;
+  width: 68px;
+  height: 69px;
+  margin: auto;
+  svg {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+
+    fill: #fff;
+  }
+}
+svg.page-top-icon__bg {
+  width: 68px;
+  height: 69px;
+
+  fill: #3490bc;
+}

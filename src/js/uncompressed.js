@@ -28,34 +28,6 @@ function pageWidget(pages) {
 // END Меню для навигации при разработке
 
 
-//background top menu
-$(function() {
-  $(window).scroll(function() {
-    var topToDocument = window.pageYOffset || document.documentElement.scrollTop;
-    var menu = document.getElementById('header');
-    if (topToDocument <= 200) {
-      $(menu).removeClass('active');
-    } else {
-      $(menu).addClass('active');
-    }
-  });
-  var topToDocument = window.pageYOffset || document.documentElement.scrollTop;
-  var menu = document.getElementById('header');
-  if (topToDocument <= 200) {
-    $(menu).removeClass('active');
-  } else {
-    $(menu).addClass('active');
-  }
-});
-
-
-
-$('#burger input').on('click', function () {
-  $('#menu__list').toggleClass('active');
-});
-
-
-
 // begin popup open
 $('.popup-open').on('click', function() {
   $('.popup__layer').fadeIn();
@@ -67,8 +39,6 @@ $('.popup__close, .popup__btn').on('click', function() {
   $('.popup__layer').fadeOut();
 });
 // end popup close
-
-
 
 
 //====== Begin Programmer code ======

@@ -1,37 +1,6 @@
-//begin blog-sec
-section.blog-sec
+//begin page-header
+section.page-header(style="background-image:url('assets/img/top-slider-02.jpg')")
   .container
-    header.blog-sec__header
-      h2.blog-sec__header-title Наш блог
-    .blog-sec__row
-      a(href="#").blog-sec__item
-        .blog-sec__pic
-          img(src="assets/img/blog-sec.jpg" alt="img")
-          .blog-sec__date
-            span.blog-sec__date--number 29
-            span.blog-sec__date--month сентября
-        h3.blog-sec__title уход за климатической системой авто
-
-      a(href="#").blog-sec__item
-        .blog-sec__pic
-          img(src="assets/img/blog-sec.jpg" alt="img")
-          .blog-sec__date
-            span.blog-sec__date--number 29
-            span.blog-sec__date--month сентября
-        h3.blog-sec__title уход за климатической системой авто
-
-      a(href="#").blog-sec__item
-        .blog-sec__pic
-          img(src="assets/img/blog-sec.jpg" alt="img")
-          .blog-sec__date
-            span.blog-sec__date--number 29
-            span.blog-sec__date--month сентября
-        h3.blog-sec__title уход за климатической системой авто
-
-
-    a(href="#").blog-sec__link
-      span Все новости
-      svg
-        use(xlink:href="assets/img/sprite.svg#right-arrow")
-
-//end   blog-sec
+    h1.page-header__title #{pageHeaderTitle}
+    include ../elements/breadcrumbs
+//end   page-header

@@ -1,113 +1,118 @@
-.breaking-sec {
-  padding-top: 50px;
-  .container {
-    position: relative;
-    max-width: 1000px;
-    &::before,
-    &::after {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      content: '';
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-    }
-    &::before {
-      left: 100%;
-      width: 496px;
-      height: 373px;
-      background-image: url('../img/breaking-car.jpg');
-    }
-    &::after {
-      right: 100%;
-      width: 417px;
-      height: 470px;
-      background-image: url('../img/breaking-triangle.png');
-    }
-  }
-}
-.breaking-sec__header {
-  margin-bottom: 20px;
-  text-align: center;
-}
-.breaking-sec__header-title {
-  font-family: $font-beb-b;
-  font-size: 48px;
-  color: #3490bc;
-}
-.breaking-sec__body {
-  display: flex;
-  flex-wrap: wrap;
-}
-.breaking-sec__item--text {
-  width: 100%;
-  padding-top: 15px;
-  p {
-    font-size: 16px;
-    line-height: 1.24;
-    color: #1c6996;
-  }
-}
-.breaking-sec__item--ul,
-.breaking-sec__item--img {
-  width: 50%;
-
+.aside {
+  flex: none;
+  width: 285px;
+  margin-top: -50px;
+  padding: 0 0 25px 0;
   @include max(700) {
-    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    transition: transform .5s;
+    transform: translate(-100%);
+    &.active {
+    transform: translate(0);
+
+    }
   }
 }
-.breaking-sec__item--ul {
-  display: flex;
+.aside-open {
+  display: none;
+  width: 30px;
+  height: 180px;
+  background-color: #3490bc;
+  position: absolute;
+  left: calc(100% - 1px);
+  top: 0;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-
-  @include max(700) {
-    justify-content: center;
-    padding: 10px 0;
-  }
-
-  ul {
-    margin: 0;
-    padding: 0 0 0 20px;
-  }
-  li {
-    font-family: $font-beb;
-    font-size: 24px;
-    position: relative;
-    list-style: none;
-    text-transform: uppercase;
-    color: #0a6798;
-    &::before {
-      position: absolute;
-      top: 15px;
-      left: -20px;
-      width: 9px;
-      height: 9px;
-      content: '';
-      background-image: url('../img/ul.png');
-      background-size: contain;
-    }
-  }
-}
-.breaking-sec__item--img {
-  img {
-    display: block;
-    width: 100%;
-    max-width: 90%;
-    margin: 10px auto;
-  }
-}
-.breaking-sec__footer {
-  padding: 20px 0;
-  text-align: center;
-}
-.breaking-sec__btn {
-  font-size: 26px;
   span {
-    @include max(550) {
-      font-size: 20px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-family:$font-beb;
+    font-size: 22px;
+    letter-spacing:1px;
+    transform: rotate(-90deg);
+    color: #ffffff;
+  }
+  //svg {
+  //  width: 70%;
+  //  height: 70%;
+  //  fill:#fff;
+  //}
+  @include max(700) {
+  display: flex;
+  }
+}
+.aside-menu {
+  margin-bottom: 15px;
+  padding: 25px 0 20px 0;
+  background-image: url('../img/bg-aside.jpg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+.aside-menu__title {
+  font-family: $font-beb-b;
+  font-size: 36px;
+  padding: 0 20px;
+  letter-spacing: .9px;
+  color: #fff;
+}
+
+.aside-menu__list {
+  margin: 0;
+  padding: 0;
+}
+.aside-menu__item {
+  padding: 0 20px;
+  list-style: none;
+  &.active {
+    background-color: #0d587c;
+    .aside-menu__link {
+      text-decoration: none;
     }
+  }
+}
+.aside-menu__link {
+  font-size: 16px;
+  display: block;
+  padding: 7px 0;
+  color: #fff;
+  &:hover {
+    color: #fff;
+  }
+}
+
+
+.aside-banner {
+  margin-bottom: 15px;
+  padding: 20px 15px 0 15px;
+  text-align: center;
+  background-image: url('../img/bg-aside-banner.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.aside-banner__text {
+  font-family: $font-beb-b;
+  display: block;
+  color: #fff;
+}
+.aside-banner__text--01 {
+  font-size: 36px;
+}
+.aside-banner__text--02 {
+  font-size: 26px;
+}
+.aside-banner__text--03 {
+  font-size: 53px;
+  line-height: 1;
+}
+.aside-banner__btn {
+  transform: translateY(50%);
+  span {
+    font-size: 24px;
+    padding: 6px 30px 8px 30px;
   }
 }

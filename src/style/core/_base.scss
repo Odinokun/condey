@@ -75,6 +75,10 @@ p {
     font-family: $font-os-b;
   }
 }
+img {
+  display: block;
+  max-width: 100%;
+}
 a {
   transition: color .5s;
   color: $highlight;
@@ -97,10 +101,14 @@ ul {
 }
 //кастомные пункты списка с цифрами
 ol {
-  // list-style: none;
-  // @include counter(li);
+  list-style: none;
+
+    padding-left: 25px;
+@include counter(li);
   li::before {
-    // color: $brand;
+    font-family: $font-beb-b;
+    font-size: 18px;
+    color: #277da7;
   }
 }
 input,
@@ -140,19 +148,26 @@ svg {
   position: relative;
   flex: 1 0 auto;
 }
-.container {
+.container,
+.page-container {
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 30px;
 
-  @include max(768) {
+@include max(768) {
     padding: 0 20px;
   }
-  @include max(425) {
-    padding: 0 10px;
+
+@include max(425) {
+    //padding: 0 10px;
   }
+}
+.container--main {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 50px;
 }
 .header,
 .page-header,
@@ -200,7 +215,8 @@ svg {
     background-color: #ea2c3a;
 
     clip-path: polygon(34% 0, 100% 5%, 100% 81%, 50% 100%, 0 84%, 0 10%);
-    @include max(550) {
+
+@include max(550) {
       padding: 11px 30px 15px 30px;
     }
   }

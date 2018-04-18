@@ -1,7 +1,35 @@
-//begin page-header
-section.page-header(style="background-image:url('assets/img/top-slider-02.jpg')")
-  .container
-    h1.page-header__title #{pageHeaderTitle}
-    include ../elements/breadcrumbs
+//begin aside
+aside.aside#aside
+  .aside-open
+    span наши услуги
+    //svg
+      use(xlink:href="assets/img/sprite.svg#wrench")
+  nav.aside-menu
+    h3.aside-menu__title Наши услуги
+    ul.aside-menu__list
+      li.aside-menu__item
+        a(href="#").aside-menu__link Заправка, диагностика
+      li.aside-menu__item
+        a(href="#").aside-menu__link Ремонт кондиционера
+      li.aside-menu__item
+        a(href="#").aside-menu__link Изготовление шлангов
+      li.aside-menu__item
+        a(href="#").aside-menu__link Ремонт радиаторов
+      li.aside-menu__item.active
+        a(href="#").aside-menu__link Ремонт компрессоров
+      li.aside-menu__item
+        a(href="#").aside-menu__link Промывка системы автокондиционера
+      li.aside-menu__item
+        a(href="#").aside-menu__link Антибактериальная обработка
+      li.aside-menu__item
+        a(href="#").aside-menu__link Замена осушителей, ТРВ,
+      li.aside-menu__item
+        a(href="#").aside-menu__link Замена испарителя
 
-//end   page-header
+  .aside-banner
+    span.aside-banner__text.aside-banner__text--01 АКЦИЯ!
+    span.aside-banner__text.aside-banner__text--02 заправка кондиционера
+    span.aside-banner__text.aside-banner__text--03 499р.
+    button.aside-banner__btn.btn
+      span Записаться
+//end   aside
