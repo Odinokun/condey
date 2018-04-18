@@ -1,6 +1,6 @@
 .why-we {
   position: relative;
-  overflow: hidden;
+  //overflow: hidden;
   margin-top: -50px;
   padding-top: 170px;
   background-image: url('../img/bg-why-we.png');
@@ -10,6 +10,7 @@
   .container {
     position: relative;
     max-width: 1000px;
+    text-align: center;
     &::before {
       position: absolute;
       right: 100%;
@@ -23,7 +24,6 @@
 }
 .why-we__header {
   margin-bottom: 50px;
-  text-align: center;
 }
 .why-we__header-title {
   font-family: $font-beb-b;
@@ -34,6 +34,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  text-align: left;
 }
 .why-we__item {
   display: flex;
@@ -51,6 +52,7 @@
     margin-bottom: 30px;
     text-align: center;
   }
+
   &:hover {
     svg {
       transform: scale(1.1);
@@ -75,4 +77,15 @@
   font-size: 22px;
   line-height: 1.15;
   color: #fff;
+}
+.why-we__btn {
+  font-size: 26px;
+  transform: translateY(50%);
+
+  @include max(550) {
+    font-size: 20px;
+  }
+  @include max(375) {
+    font-size: 16px;
+  }
 }

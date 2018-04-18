@@ -1,0 +1,107 @@
+.breaking-sec {
+  padding-top: 50px;
+  .container {
+    position: relative;
+    max-width: 1000px;
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      content: '';
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    &::before {
+      left: 100%;
+      width: 496px;
+      height: 373px;
+      background-image: url('../img/breaking-car.jpg');
+    }
+    &::after {
+      right: 100%;
+      width: 417px;
+      height: 470px;
+      background-image: url('../img/breaking-triangle.png');
+    }
+  }
+}
+.breaking-sec__header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.breaking-sec__header-title {
+  font-family: $font-beb-b;
+  font-size: 48px;
+  color: #3490bc;
+}
+.breaking-sec__body {
+  display: flex;
+  flex-wrap: wrap;
+}
+.breaking-sec__item--text {
+  width: 100%;
+  padding-top: 15px;
+  p {
+    font-size: 16px;
+    line-height: 1.24;
+    color: #1c6996;
+  }
+}
+.breaking-sec__item--ul,
+.breaking-sec__item--img {
+  width: 50%;@include max(700) {
+    width: 100%;
+  }
+}
+.breaking-sec__item--ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;@include max(700) {
+    justify-content: center;
+    padding: 10px 0;
+  }
+  ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+  }
+  li {
+    font-family: $font-beb;
+    font-size: 24px;
+    position: relative;
+    list-style: none;
+    text-transform: uppercase;
+    color: #0a6798;
+    &::before {
+      position: absolute;
+      top: 15px;
+      left: -20px;
+      width: 9px;
+      height: 9px;
+      content: '';
+      background-image: url('../img/ul.png');
+      background-size: contain;
+    }
+  }
+}
+.breaking-sec__item--img {
+  img {
+    display: block;
+    width: 100%;
+    max-width: 90%;
+    margin: 10px auto;
+  }
+}
+.breaking-sec__footer {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.breaking-sec__btn {
+  font-size: 26px;@include max(550) {
+    font-size: 20px;
+  }@include max(375) {
+    font-size: 16px;
+  }
+}
