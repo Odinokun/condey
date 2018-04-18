@@ -8,7 +8,8 @@ $(document).ready(function ($) {
     'index',
     'inner',
     'service',
-    'repairs'
+    'repairs',
+    'contacts'
     ]);
 });
 

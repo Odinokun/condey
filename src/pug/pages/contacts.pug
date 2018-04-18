@@ -1,0 +1,55 @@
+extends ../_template
+
+mixin services-sec__item(svg, title)
+  a(href="#").service__item
+    .service__icon
+      svg.service-bg
+        path(d="M430,780l16-43,32-2,18-12,32,6,15,27-2,25-8,48-37,1-33,8-13-17-14-15Z" transform="translate(-430 -723)")
+      svg
+        use(xlink:href='assets/img/sprite.svg#services-' + svg + '')
+    span.service__title #{title}
+
+
+block variables
+  - var title = 'Контакты | Кондеи'
+  - var pageHeaderTitle = 'Контакты'
+
+block content
+  include ../sections/header
+
+  //begin content
+  section.main.contacts
+    include ../sections/page-header
+    .container
+      .page-top-icon
+        svg.page-top-icon__bg
+          path(d='M924,222.2l9.628-25.8,19.257-1.2,10.832-7.2,19.256,3.6L992,207.8l-1.2,15-4.814,28.8-22.265.6L943.858,257l-7.823-10.2-8.425-9Z', transform='translate(-924 -188)')
+        svg
+          use(xlink:href='assets/img/sprite.svg#services-01')
+
+      header.contacts__header
+        h2.page-title Адреса наших сервисов
+      .contacts__row
+        .contacts__item.contacts__item--left
+          svg
+            use(xlink:href="assets/img/sprite.svg#marker")
+          a(href="#" target="_blank" rel="nofollow noopener noreferrer").contacts__adress
+            span.contacts__adress--01 м. Балтийская
+            span.contacts__adress--02 ул. Розенштейна, 38
+          a(href="tel:+78127771886").contacts__phone +7 (812) 777-18-86
+        .contacts__item.contacts__item--right
+          svg
+            use(xlink:href="assets/img/sprite.svg#marker")
+          a(href="#" target="_blank" rel="nofollow noopener noreferrer").contacts__adress
+            span.contacts__adress--01 м. Ленинский проспект
+            span.contacts__adress--02 Брестский бульвар, 9А
+          a(href="tel:+78127771889").contacts__phone +7 (812) 777-18-89
+      button.top-slider__btn.btn.popup-open
+        span Записаться на диагностику
+
+
+    include ../sections/map
+
+  //end content
+
+  include ../sections/footer
