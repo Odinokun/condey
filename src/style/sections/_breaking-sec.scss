@@ -52,14 +52,18 @@
 }
 .breaking-sec__item--ul,
 .breaking-sec__item--img {
-  width: 50%;@include max(700) {
+  width: 50%;
+
+@include max(700) {
     width: 100%;
   }
 }
 .breaking-sec__item--ul {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;@include max(700) {
+  flex-wrap: wrap;
+
+@include max(700) {
     justify-content: center;
     padding: 10px 0;
   }
@@ -95,13 +99,17 @@
   }
 }
 .breaking-sec__footer {
-  margin-bottom: 30px;
+  padding: 20px 0;
   text-align: center;
 }
 .breaking-sec__btn {
-  font-size: 26px;@include max(550) {
+  font-size: 26px;
+
+@include max(550) {
     font-size: 20px;
-  }@include max(375) {
+  }
+
+@include max(375) {
     font-size: 16px;
   }
 }

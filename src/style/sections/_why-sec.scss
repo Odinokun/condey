@@ -1,0 +1,151 @@
+.why-sec {
+  .container {
+    max-width: 1000px;
+  }
+}
+.why-sec__header {
+  margin-bottom: 20px;
+  text-align: center;
+  p {
+    font-size: 16px;
+    line-height: 1.24;
+    color: #1c6996;
+  }
+}
+.why-sec__body {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
+  padding-left: 80px;
+
+  @include max(700) {
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.why-sec__header-title {
+  font-family: $font-beb-b;
+  font-size: 48px;
+  color: #3490bc;
+}
+.why-sec__tooltip {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+
+  @include max(700) {
+    margin-bottom: 15px;
+  }
+  &:first-child,
+  &:last-child {
+    margin-top: 30px;
+
+    @include max(700) {
+      margin-top: 0;
+    }
+  }
+  &:hover {
+    .why-sec__tooltip-message {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+  svg {
+    width: 15px;
+    height: 41px;
+    margin-right: 10px;
+
+    fill: #1c6996;
+  }
+}
+.why-sec__tooltip-title {
+  font-family: $font-beb-b;
+  font-size: 24px;
+  margin-top: 5px;
+  text-decoration: underline;
+  color: #1c6996;
+}
+.why-sec__tooltip-message {
+  position: absolute;
+  z-index: 5;
+  top: calc(100% + 10px);
+  left: 50%;
+  width: 310px;
+  padding: 20px;
+  transition: opacity .5s;
+  transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0;
+  background-color: #fff;
+  box-shadow: 0 -2px  25px rgba(35, 106, 141, .41);
+
+  @include max(700) {
+    display: none;
+  }
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    left: 0;
+    width: 40px;
+    height: 13px;
+    margin: auto;
+    content: '';
+    border-right: 20px solid transparent;
+    border-bottom: 13px solid #fff;
+    border-left: 20px solid transparent;
+  }
+}
+.why-sec__car {
+  position: relative;
+  height: 170px;
+  margin: 100px 0;
+  background-image: url('../img/bg-why-we.png');
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+
+  @include max(700) {
+    margin: 50px 0;
+  }
+  @include max(550) {
+    margin: 0;
+  }
+  &::before {
+    position: absolute;
+    top: calc(50% + 10px);
+    right: 0;
+    left: 0;
+    width: 90%;
+    max-width: 805px;
+    height: 385px;
+    margin: auto;
+    content: '';
+    transform: translateY(-50%);
+    background-image: url('../img/why.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+.why-sec__footer {
+  padding: 20px 0;
+  text-align: center;
+  p {
+    font-size: 16px;
+    line-height: 1.24;
+    color: #1c6996;
+  }
+}
+.why-sec__btn {
+  font-size: 26px;
+
+  @include max(550) {
+    font-size: 20px;
+  }
+  @include max(375) {
+    font-size: 16px;
+  }
+}
