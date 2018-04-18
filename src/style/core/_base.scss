@@ -101,10 +101,10 @@ ul {
 }
 //кастомные пункты списка с цифрами
 ol {
+  padding-left: 25px;
   list-style: none;
 
-    padding-left: 25px;
-@include counter(li);
+  @include counter(li);
   li::before {
     font-family: $font-beb-b;
     font-size: 18px;
@@ -140,9 +140,9 @@ svg {
 }
 //изменяем цвет выделения текста мышью
 ::selection {
-  // background-color: $brand;
+   background-color: #3490bc;
   // color: $brand;
-  // text-shadow: none;
+   text-shadow: none;
 }
 .main {
   position: relative;
@@ -156,11 +156,10 @@ svg {
   margin: 0 auto;
   padding: 0 30px;
 
-@include max(768) {
+  @include max(768) {
     padding: 0 20px;
   }
-
-@include max(425) {
+  @include max(425) {
     //padding: 0 10px;
   }
 }
@@ -215,9 +214,19 @@ svg {
     background-color: #ea2c3a;
 
     clip-path: polygon(34% 0, 100% 5%, 100% 81%, 50% 100%, 0 84%, 0 10%);
-
-@include max(550) {
+    @include max(550) {
       padding: 11px 30px 15px 30px;
     }
+  }
+}
+.page-title {
+  font-family: $font-beb;
+  font-size: 48px;
+  line-height: 1;
+  color: #3490bc;
+
+  @include max(700) {
+    font-size: 36px;
+    line-height: 1.1;
   }
 }
