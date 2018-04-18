@@ -55,4 +55,20 @@ $('#burger input').on('click', function () {
 });
 
 
+
+// begin popup open
+$('.popup-open').on('click', function() {
+  $('.popup__layer').fadeIn();
+});
+// end popup open
+
+// begin popup close
+$('.popup__close, .popup__btn').on('click', function() {
+  $('.popup__layer').fadeOut();
+});
+// end popup close
+
+
+
+
 //====== Begin Programmer code ======

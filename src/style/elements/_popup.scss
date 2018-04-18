@@ -1,25 +1,103 @@
 .popup__layer {
   position: fixed;
-  z-index: 99;
+  z-index: 999;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  display: none;
-  background-color: rgba(0, 0, 0, .8);
+    display: none;
+  background-color: rgba(13, 42, 56, .8);
 }
 .popup {
   position: absolute;
-  z-index: 100;
+  z-index: 1000;
   top: 50%;
   left: 50%;
-  display: none;
-  width: 300px;
-  padding: 50px 30px;
   transform: translate(-50%, -50%);
-  background-color: #369;
+  @include max(425) {
+    width: 80%;
+  }
+  text-align: center;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    background-color: #341;
+    background-image: url('../img/bg-why-we.png');
+    background-position: 0 100%;
+
+    clip-path: polygon(0 0, 20% 10%, 89% 0, 100% 9%, 97% 100%, 63% 95%, 29% 100%, 2% 89%);
+  }
+  .popup__close{
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 20px;
+    transition: transform .5s;
+    cursor: pointer;
+    height: 20px;
+    &:hover {
+      transform: rotate(360deg);
+    }
+    svg {
+      width: 20px;
+      height: 20px;
+      fill:#fff;
+    }
+  }
+
+  .popup__inn {
+    padding: 80px 50px 50px 50px;
+    transform: translate(-10px, 10px);
+    background-color: #fff;
+@include max(425) {
+    padding: 80px 20px 50px 20px;
+
+}
+    clip-path: polygon(0 0, 20% 10%, 89% 0, 100% 9%, 97% 100%, 63% 95%, 29% 100%, 2% 89%);
+  }
+}
+.popup__title {
+  font-size: 36px;
+  color: #205d7a;
+  span {
+    color: #eb5858;
+  }
 }
 .popup__form {
   display: flex;
+  align-items: center;
   flex-direction: column;
+  width: 100%;
+  max-width: 310px;
+}
+.popup__input {
+  font-size: 18px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 9px 10px 7px 10px;
+}
+.popup__btn {
+  width: 100%;
+  span {
+    font-size: 24px;
+    padding: 7px 60px 9px 60px;
+    @include max(425) {
+      font-size: 20px;
+    padding: 7px 20px 9px 20px;
+    }
+  }
+}
+.popup__input--submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: auto;
+  opacity: 0;
 }
