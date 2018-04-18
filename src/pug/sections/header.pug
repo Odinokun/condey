@@ -1,4 +1,30 @@
 // begin header
-header.header(style='background-color:#167;color:#fff;text-align:center;text-transform:uppercase;')
-  h1 header
+header.header#header
+  .container
+    a(href="#").logo
+      img(src="assets/img/logo.png" alt="logo")
+    .header__contacts
+      .header__contact
+        a(href="tel:+78127771886").header__phone +7 (812) 777-18-86
+        a(href="#" target="_blank" rel="nofollow noopener noreferrer").header__adress ул. Розенштейна, 38
+      .header__contact
+        a(href="tel:+78127771889").header__phone +7 (812) 777-18-89
+        a(href="#" target="_blank" rel="nofollow noopener noreferrer").header__adress Брестский бульвар, 9А
+    .header__btn
+      button.header-btn__btn.btn.popup-open
+        span Оставить заявку
+    nav.menu
+      include ../elements/burger
+      ul.menu__list#menu__list
+        li.menu__item
+          a(href="#").menu__link Главная
+        li.menu__item
+          a(href="#").menu__link Компания
+        li.menu__item
+          a(href="#").menu__link Услуги
+        li.menu__item
+          a(href="#").menu__link Акции
+        li.menu__item
+          a(href="#").menu__link Контакты
+      
 // end header

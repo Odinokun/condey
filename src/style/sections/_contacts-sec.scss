@@ -21,12 +21,9 @@
 .contacts-sec__row {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
-
-  @include max(768) {
+  justify-content: space-between;@include max(768) {
     justify-content: space-around;
-  }
-  @include max(550) {
+  }@include max(550) {
     flex-wrap: wrap;
   }
 }
@@ -47,13 +44,10 @@
 .contacts-sec__item--left,
 .contacts-sec__item--right {
   flex: none;
-  width: 230px;
-
-  @include max(768) {
+  width: 230px;@include max(768) {
     width: 50%;
     max-width: 250px;
-  }
-  @include max(550) {
+  }@include max(550) {
     width: 100%;
     max-width: 260px;
     margin-bottom: 30px;
@@ -68,9 +62,7 @@
   background-image: url('../img/contacts-sec-car.png');
   background-repeat: no-repeat;
   background-position: 50% 0;
-  background-size: contain;
-
-  @include max(768) {
+  background-size: contain;@include max(768) {
     display: none;
   }
 }
@@ -79,7 +71,7 @@
   text-decoration: none;
   color: #fff;
   &:hover {
-    color: #ffffff;
+    color: #fff;
   }
 }
 .contacts-sec__adress {
@@ -98,11 +90,9 @@
 .top-slider__btn {
   font-size: 26px;
   transform: translateY(50%);
-
-  @include max(550) {
-    font-size: 20px;
-  }
-  @include max(375) {
-    font-size: 16px;
+  span {
+    @include max(550) {
+      font-size: 20px;
+    }
   }
 }

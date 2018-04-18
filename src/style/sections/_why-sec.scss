@@ -39,6 +39,7 @@
   @include max(700) {
     margin-bottom: 15px;
   }
+
   &:first-child,
   &:last-child {
     margin-top: 30px;
@@ -85,6 +86,7 @@
   @include max(700) {
     display: none;
   }
+
   &::before {
     position: absolute;
     right: 0;
@@ -113,6 +115,7 @@
   @include max(550) {
     margin: 0;
   }
+
   &::before {
     position: absolute;
     top: calc(50% + 10px);
@@ -141,11 +144,10 @@
 }
 .why-sec__btn {
   font-size: 26px;
-
-  @include max(550) {
-    font-size: 20px;
-  }
-  @include max(375) {
-    font-size: 16px;
+  margin-top: 20px;
+  span {
+    @include max(550) {
+      font-size: 20px;
+    }
   }
 }

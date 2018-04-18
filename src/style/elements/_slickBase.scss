@@ -5,7 +5,9 @@
 .slick-slider {
   user-select: auto;
 }
-
+.slick-slide{
+  outline: none;
+}
 /* Arrows */
 .slick-prev,
 .slick-next {

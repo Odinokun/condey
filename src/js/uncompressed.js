@@ -28,4 +28,31 @@ function pageWidget(pages) {
 // END Меню для навигации при разработке
 
 
+//background top menu
+$(function() {
+  $(window).scroll(function() {
+    var topToDocument = window.pageYOffset || document.documentElement.scrollTop;
+    var menu = document.getElementById('header');
+    if (topToDocument <= 200) {
+      $(menu).removeClass('active');
+    } else {
+      $(menu).addClass('active');
+    }
+  });
+  var topToDocument = window.pageYOffset || document.documentElement.scrollTop;
+  var menu = document.getElementById('header');
+  if (topToDocument <= 200) {
+    $(menu).removeClass('active');
+  } else {
+    $(menu).addClass('active');
+  }
+});
+
+
+
+$('#burger input').on('click', function () {
+  $('#menu__list').toggleClass('active');
+});
+
+
 //====== Begin Programmer code ======

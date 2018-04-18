@@ -1,26 +1,25 @@
-.burger__menu {
-  font-family: $font, sans-serif;
-  font-size: 22px;
-  position: absolute;
-  top: 4px;
-  left: 50px;
-  letter-spacing: 1px;
-  color: #fafafa;
-}
 .burger {
-  width: 130px;
-  height: 40px;
-}
-.burger input {
-  display: none;
-}
-.burger label {
   position: relative;
   display: block;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  background: transparent;
+  width: 35px;
+  height: 35px;
+  margin-top: -4px;
+
+  margin-left: 20px;
+  @include min(941) {
+    display: none;
+  }
+  input {
+    display: none;
+  }
+  label {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: transparent;
+  }
 }
 /* Exit Icon */
 .burger label:before,
@@ -35,7 +34,7 @@
   background: #fafafa;
 }
 .burger label:before {
-  animation: animationOneReverse 1s ease forwards;
+  animation: animationOneReverse .5s ease forwards;
 }
 @keyframes animationOneReverse {
   0% {
@@ -50,7 +49,7 @@
   }
 }
 .burger input:checked + label:before {
-  animation: animationOne 1s ease forwards;
+  animation: animationOne .5s ease forwards;
 }
 @keyframes animationOne {
   0%,
@@ -76,7 +75,7 @@
   background: #fafafa;
 }
 .burger label:after {
-  animation: animationTwoReverse 1s ease forwards;
+  animation: animationTwoReverse .5s ease forwards;
 }
 @keyframes animationTwoReverse {
   0% {
@@ -91,7 +90,7 @@
   }
 }
 .burger input:checked + label:after {
-  animation: animationTwo 1s ease forwards;
+  animation: animationTwo .5s ease forwards;
 }
 @keyframes animationTwo {
   0%,

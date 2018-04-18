@@ -81,11 +81,9 @@
 .why-we__btn {
   font-size: 26px;
   transform: translateY(50%);
-
-  @include max(550) {
-    font-size: 20px;
-  }
-  @include max(375) {
-    font-size: 16px;
+  span {
+    @include max(550) {
+      font-size: 20px;
+    }
   }
 }
