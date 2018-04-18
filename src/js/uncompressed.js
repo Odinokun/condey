@@ -7,7 +7,8 @@ $(document).ready(function ($) {
   pageWidget([
     'index',
     'inner',
-    'service'
+    'service',
+    'repairs'
     ]);
 });
 

@@ -2,46 +2,40 @@
   flex: none;
   width: 285px;
   margin-top: -50px;
-  padding: 0 0 25px 0;
-  @include max(700) {
+  padding: 0 0 25px 0;@include max(700) {
     position: absolute;
+    z-index: 50;
     top: 0;
     left: 0;
-    z-index: 50;
     transition: transform .5s;
     transform: translate(-100%);
     &.active {
-    transform: translate(0);
-
+      transform: translate(0);
     }
   }
 }
 .aside-open {
+  position: absolute;
+  top: 0;
+  left: calc(100% - 1px);
   display: none;
+  align-items: center;
+  justify-content: center;
   width: 30px;
   height: 180px;
   background-color: #3490bc;
-  position: absolute;
-  left: calc(100% - 1px);
-  top: 0;
-  justify-content: center;
-  align-items: center;
-  span {
-    white-space: nowrap;
-    text-transform: uppercase;
-    font-family:$font-beb;
-    font-size: 22px;
-    letter-spacing:1px;
-    transform: rotate(-90deg);
-    color: #ffffff;
-  }
-  //svg {
-  //  width: 70%;
-  //  height: 70%;
-  //  fill:#fff;
-  //}
+
   @include max(700) {
-  display: flex;
+    display: flex;
+  }
+  span {
+    font-family: $font-beb;
+    font-size: 22px;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
   }
 }
 .aside-menu {
